@@ -1,40 +1,45 @@
 import './App.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
 import { deckFetch} from './ApiManager.js'
-// import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.js'
-// import { NameForm, ProfessionForm } from './UserInput.js'  
-// import { CartChoice1 , CartChoice2} from './CartChoice.js'
+import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
+import { NameForm, ProfessionForm } from './Userinput.tsx'  
+import { CartChoice1 } from './CartChoice.ts'
+// import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
+ 
+
 
 
 var actualDeckUrl=""
 const profession= "warrior"
+let deckUrl:string
 
-// async function deckCollection(){
-// let deckUrl=await deckFetch()
-// actualDeckUrl=deckUrl
-// console.log("logging actual Deck URL  "+ actualDeckUrl)
-// console.log("deckUrl "+deckUrl)
-// console.log("actual deckUrl"+actualDeckUrl)
+async function deckCollection(){
+deckUrl=await deckFetch(deckUrl)
+actualDeckUrl=deckUrl
+console.log("logging actual Deck URL  "+ actualDeckUrl)
+console.log("deckUrl "+deckUrl)
+return(
+  deckUrl
+)
 
-
-// import { CartChoice1, CartChoice2 } from './CartChoice'; 
 // function displayDeck(DECKRETURN){
 //   console.log("CURRENT DEBUGGING")
 //   console.log(DECKRETURN)
-// }
+}
 
 function App() {
   //var insted of let for global scope allows functions to run code to adjust it
-  // var deckUrl = "" 
-  // deckFetch(deckUrl)
-  // var actualDeckUrl=deckFetch()
+//   var deckUrl = "" 
+//   deckFetch(deckUrl)
+//   var actualDeckUrl=deckFetch()
   
-  // let deckUrl =
-  // deckFetch()
-  // .then(displayDeck)
+//   let deckUrl =
+//   deckFetch()
+//   .then(displayDeck)
   
-// deckCollection(actualDeckUrl)
+deckCollection()
+
 
 
 
@@ -47,15 +52,15 @@ function App() {
 
   //Proto type code to create a class, 
   //later create user form to fill in
-  // const gameSave1 = new SaveGame(
-  //   "Riddick",
-  //   "Arkvoodle",
-  //   "Warrior", 
-  //   13
-  // )
-  // writeSaveGame(gameSave1)
-  // readSaveGame()
-  // console.log("game save details:", gameSave1)
+  const gameSave1 = new SaveGame(
+    "Riddick",
+    "Arkvoodle",
+    "Warrior", 
+    13
+  )
+  writeSaveGame(gameSave1)
+  readSaveGame()
+  console.log("game save details:", gameSave1)
   
 
   return (
@@ -81,8 +86,8 @@ function App() {
           have consequences, but first a few decisions.
         </p>
         <div className="UiStart">
-        {/* <NameForm/>
-        <ProfessionForm/> */}
+        <NameForm/>
+        <ProfessionForm/>
         </div>
 
         <div>
@@ -91,15 +96,10 @@ function App() {
             remain in the cart, what would you like to do?
           </p>
           <br/>
-        {/* <button onClick={CartChoice1(actualDeckUrl, profession)}>Abandon the cart to help the person in distress</button>
-        <button on Click={CartChoice2(actualDeckUrl, profession)}>Ignore the cry and loot the abandoned cart for supplies</button> */}
+        <button onClick={()=>{CartChoice1(actualDeckUrl, profession)}}>Abandon the cart to help the person in distress</button>
+        {/* <button onClick={()=>{CartChoice2(actualDeckUrl, profession)}}>Ignore the cry and loot the abandoned cart for supplies</button> */}
         </div>
-        {/* <CartChoice /> */}
-      <div className="choiceResults">
-      <p>
-        Arkvoolddgsdgs
-      </p>
-      </div>
+
       </body>
     </div>
   );

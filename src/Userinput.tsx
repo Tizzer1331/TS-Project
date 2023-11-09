@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {useState} from 'react';
 
 
@@ -11,7 +11,11 @@ function NameForm(){
     }
   return(
     <form onSubmit={handleSubmit}>
-      <label for = "CharacterName">Character Name</label><br/>
+      {/* <label for = "CharacterName">Character Name</label><br/> */}
+      <label>
+        Character Name
+      </label>
+      <br/>
       <input type="text" value={name}
       onChange={(e) => setName(e.target.value)}/>
       <input type = "submit"/>
@@ -27,7 +31,10 @@ function ProfessionForm(){
     } 
   return(
     <form onSubmit={handleSubmit}>
-      <label for = "profession">Profession</label><br/>
+      <label>
+        Profession
+      </label>
+      <br/>
       <select onChange={(e) => setProfession(e.target.value)}>
         <option value="warrior">Warrior</option>
         <option value="rogue">Rogue</option>

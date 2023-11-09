@@ -1,5 +1,7 @@
 
-async function deckFetch(deckUrl){
+
+
+async function deckFetch(deckUrl:string){
     const response = await fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
     const newDeck = await response.json();
     deckUrl= "https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"
@@ -27,9 +29,11 @@ return (deckUrl)
 async function deckDraw(deckUrl:string,skillReq:number){
     //Prime real estate for testing code
     let value=0
-    let skillSuccess=false
+    
     const response = await fetch(deckUrl);
+    console.log(response)
     const newCard = await response.json();
+
     if (newCard.value === "KING"){
         value=13;
     }
@@ -45,14 +49,22 @@ async function deckDraw(deckUrl:string,skillReq:number){
     console.log(value)
 
 if ( value >= skillReq){
-    skillSuccess=true;
+    
+    const skillSuccess=true
+    return(
+        skillSuccess
+    // true
+    )
 }
-else{
-    skillSuccess=false;
+else{  
+    
+    const skillSuccess=false
+    return(
+        skillSuccess
+    // false
+    )
 }
-return(
-    skillSuccess
-)
+
 }
 
 export {deckFetch}
