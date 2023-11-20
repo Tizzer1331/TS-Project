@@ -31,8 +31,8 @@ async function deckDraw(deckUrl:string,skillReq:number){
     let value=0
     
     const response = await fetch(deckUrl);
-    console.log(response)
     const newCard = await response.json();
+    console.log(newCard)
 
     if (newCard.value === "KING"){
         value=13;

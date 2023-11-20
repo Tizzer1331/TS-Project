@@ -5,20 +5,19 @@ import { deckFetch} from './ApiManager.js'
 import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
 import { NameForm, ProfessionForm } from './Userinput.tsx'  
 import { CartChoice1 } from './CartChoice.ts'
+import { useState } from 'react';
 // import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
  
 
 
-
 var actualDeckUrl=""
-const profession= "warrior"
+
 let deckUrl:string
 
 async function deckCollection(){
 deckUrl=await deckFetch(deckUrl)
 actualDeckUrl=deckUrl
 console.log("logging actual Deck URL  "+ actualDeckUrl)
-console.log("deckUrl "+deckUrl)
 return(
   deckUrl
 )
@@ -29,6 +28,8 @@ return(
 }
 
 function App() {
+const [name, setName]= useState("");
+const [profession, setProfession]= useState("Warrior");
   //var insted of let for global scope allows functions to run code to adjust it
 //   var deckUrl = "" 
 //   deckFetch(deckUrl)
@@ -86,8 +87,12 @@ deckCollection()
           have consequences, but first a few decisions.
         </p>
         <div className="UiStart">
-        <NameForm/>
-        <ProfessionForm/>
+        <NameForm setName={setName}/>
+        <br/>
+        {name}
+        <ProfessionForm setProfession={setProfession}/>
+        <br/>
+        {profession}
         </div>
 
         <div>
