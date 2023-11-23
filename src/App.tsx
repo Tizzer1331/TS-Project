@@ -1,72 +1,44 @@
 import './App.css';
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
-import { deckFetch} from './ApiManager.js'
-import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
+// import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
 import { NameForm, ProfessionForm } from './Userinput.tsx'  
 import { CartChoice1 } from './CartChoice.ts'
-import { useState } from 'react';
+import {startUp} from './startUp.ts'
+import { useState,useEffect } from 'react';
 // import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
- 
-
-
-var actualDeckUrl=""
-
-let deckUrl:string
-
-async function deckCollection(){
-deckUrl=await deckFetch(deckUrl)
-actualDeckUrl=deckUrl
-console.log("logging actual Deck URL  "+ actualDeckUrl)
-return(
-  deckUrl
-)
-
+// async function deckCollection(){
+// deckUrl=await deckFetch(deckUrl)
+// return(deckUrl)
+// setActualDeckUrl(deckUrl)
 // function displayDeck(DECKRETURN){
 //   console.log("CURRENT DEBUGGING")
 //   console.log(DECKRETURN)
-}
+
 
 function App() {
+// const [actualDeckUrl,setActualDeckUrl]=useState("");
 const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
-  //var insted of let for global scope allows functions to run code to adjust it
-//   var deckUrl = "" 
-//   deckFetch(deckUrl)
-//   var actualDeckUrl=deckFetch()
+const [actualDeckUrl,setActualDeckUrl]=useState("");
+
+useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
+
+async function DUMMYCALL(actualDeckUrl:string){
   
-//   let deckUrl =
-//   deckFetch()
-//   .then(displayDeck)
+  const response = await fetch(actualDeckUrl);
+
+  const dummyCard = await response.json();
   
-deckCollection()
+  console.log(dummyCard)
+}
 
-
-
-
-
-
-
-  // question , await a result to punt out a result IE I want to complete fetch before progressing
-  // console.log("OUT FUNCTION:"+deckUrl)
-
-
-  //Proto type code to create a class, 
-  //later create user form to fill in
-  const gameSave1 = new SaveGame(
-    "Riddick",
-    "Arkvoodle",
-    "Warrior", 
-    13
-  )
-  writeSaveGame(gameSave1)
-  readSaveGame()
-  console.log("game save details:", gameSave1)
-  
+DUMMYCALL(actualDeckUrl)
 
   return (
     <div className="App">
       <header className="App-header">
+        
       </header>
       <body className="background">
         <div className="titleSpeech">
@@ -93,6 +65,11 @@ deckCollection()
         <ProfessionForm setProfession={setProfession}/>
         <br/>
         {profession}
+
+        {/* <p>
+          Click here to create a save
+        </p>
+        <button onClick={()=>{}}>Create Save game</button> */}
         </div>
 
         <div>
@@ -104,7 +81,9 @@ deckCollection()
         <button onClick={()=>{CartChoice1(actualDeckUrl, profession)}}>Abandon the cart to help the person in distress</button>
         {/* <button onClick={()=>{CartChoice2(actualDeckUrl, profession)}}>Ignore the cry and loot the abandoned cart for supplies</button> */}
         </div>
+        <div className="cartResults">
 
+        </div>
       </body>
     </div>
   );

@@ -36,6 +36,14 @@ function CartChoice2FailUi(){
 
 }
 
+
+// function CartUiRender (){
+//     return(
+//         <p>
+//         {woooooo 1
+//     </p>  
+//     )
+// }
 export {CartChoice1SuccessUi}
 export {CartChoice1FailUi}
 export {CartChoice2SuccessUi}

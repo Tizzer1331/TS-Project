@@ -1,71 +1,95 @@
 
 
 
-async function deckFetch(deckUrl:string){
+
+async function deckFetch(setActualDeck){
     const response = await fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
     const newDeck = await response.json();
-    deckUrl= "https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"
-return (deckUrl)
-    //    console.log("success?"+newDeck.success);
-    //    console.log("new deck ID:"+newDeck.deck_id);
-    //    console.log("IN FUNCTION:"+deckUrl)
+    const deckUrl= "https://www.deckofcardsapi.com/api/deck/" + newDeck.deck_id + "/draw/?count=1"
+    setActualDeck(deckUrl)
 }
 
 
-// PROMISE ATTEMPT
-// function deckFetch(){
-//     return(
-//      new Promise(function(resolve){
-//         fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
-//         .then(response => response.json())
-//         .then(data => resolve(data.reponse));
-
-//          .then(console.log(data))
-//          .then(resolve(actualDeckUrl="https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"))
-//      })
-//     )
+// async function DeckDraw(deckIdUrl:string, skillReq:number){
+//     console.log(deckIdUrl)
+//     const response = await fetch(deckIdUrl);
+//     const newCard = await response.json();
+    
+//     console.log("Card found " + newCard)
+//     const cardValue= CardManage(newCard)
+//     if(cardValue >= skillReq){
+//         console.log("true")
+//         return(true)
+//     }
+//     else{
+//         console.log("false")
+//         return(false)
+//     }
 // }
 
-async function deckDraw(deckUrl:string,skillReq:number){
-    //Prime real estate for testing code
-    let value=0
+// function CardManage(newCard){
+//     let cardValue= 0
+//         if (newCard.cards.value === "KING"){
+//         cardValue=13;
+//     }
+//     else if (newCard.cards.value === "QUEEN"){
+//         cardValue =12;
+//     }
+//     else if (newCard.cards.value === "JACK"){
+//         cardValue=11;
+//     }
+//     else{
+//         cardValue=newCard.cards.value;
+//     }
+//     console.log("card value after cleaning " +cardValue )
+//     return(cardValue)
+// }
+
+
+async function getCard(deckIdUrl:string){
+    console.log(deckIdUrl)
     
-    const response = await fetch(deckUrl);
+    const response =await fetch(deckIdUrl);
+    // const response =await fetch("https://www.deckofcardsapi.com/api/deck/nnvfhxfw7f1n/draw/?count=1");
+
+    console.log(response)
     const newCard = await response.json();
-    console.log(newCard)
-
-    if (newCard.value === "KING"){
-        value=13;
-    }
-    else if (newCard.value === "QUEEN"){
-        value =12;
-    }
-    else if (newCard.value === "JACK"){
-        value=11;
-    }
-    else{
-        value=newCard.value;
-    }
-    console.log(value)
-
-if ( value >= skillReq){
-    
-    const skillSuccess=true
-    return(
-        skillSuccess
-    // true
-    )
+    console.log("card Drawn " + newCard)
+   let cardValue:number=0
+    if (newCard.cards.value === "KING"){
+    cardValue=13;
 }
-else{  
-    
-    const skillSuccess=false
-    return(
-        skillSuccess
-    // false
-    )
+else if (newCard.cards.value === "QUEEN"){
+    cardValue =12;
+}
+else if (newCard.cards.value === "JACK"){
+    cardValue=11;
+}
+else{
+    cardValue=newCard.cards.value;
+}
+console.log("card value after cleaning " +cardValue )
+console.log(JSON.stringify(cardValue))
+return(cardValue)
 }
 
-}
+
 
 export {deckFetch}
-export {deckDraw}
+export {DeckDraw}
+export {CardManage}
+export{getCard}
+
+
+// const myPromise: Promise<string> = new Promise((resolve, reject) => {
+//     // This Promise resolves to a string
+
+//   });
+// async function myAsyncFunction() {
+//   try {
+//     const value = await myPromise;
+//     console.log('Promise resolved with value: ' + value);
+//   } catch (error) {
+//     console.error('Promise rejected with error: ' + error);
+//   }
+// }
