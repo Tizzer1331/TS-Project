@@ -67,20 +67,26 @@ import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoic
     
 // }
 
-function CartChoice1(deckIdUrl:string, profession:string) {
-            console.log("cart Choice 1 triggered")
-            // const decision11=true
-            let skillDiff = 7
-            if (profession === "Wizard") {
-                skillDiff++
-            }
-            else {
-                skillDiff--
-            }
-            console.log("Printout of SkillDiff "+ skillDiff)
-            console.log("Deck ID before fetch " + deckIdUrl)
-            const cardValue = getCard(deckIdUrl)
-            console.log("CARD VALUE TO CHECK"+cardValue)
-            console.log(JSON.stringify(cardValue))
-        }
+async function CartChoice1(deckIdUrl: string, profession: string) {
+    console.log("cart Choice 1 triggered");
+    let skillDiff = 7;
+
+    if (profession === "Wizard") {
+        skillDiff++;
+    } else {
+        skillDiff--;
+    }
+
+    console.log("Printout of SkillDiff " + skillDiff);
+    console.log("Deck ID before fetch " + deckIdUrl);
+
+    try {
+        const cardValue = await getCard(deckIdUrl);
+        console.log("CARD VALUE TO CHECK " + cardValue);
+        console.log(JSON.stringify(cardValue));
+    } catch (error) {
+        console.error("Error fetching card value:", error);
+    }
+}
+
 export { CartChoice1 }
