@@ -1,39 +1,19 @@
 import './App.css';
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
 import { NameForm, ProfessionForm } from './Userinput.tsx'  
 import { CartChoice1 } from './CartChoice.ts'
 import {startUp} from './startUp.ts'
 import { useState,useEffect } from 'react';
-// import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
-// async function deckCollection(){
-// deckUrl=await deckFetch(deckUrl)
-// return(deckUrl)
-// setActualDeckUrl(deckUrl)
-// function displayDeck(DECKRETURN){
-//   console.log("CURRENT DEBUGGING")
-//   console.log(DECKRETURN)
 
 
 function App() {
-// const [actualDeckUrl,setActualDeckUrl]=useState("");
+
 const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
 
 useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
 
-async function DUMMYCALL(actualDeckUrl:string){
-  
-  const response = await fetch(actualDeckUrl);
 
-  const dummyCard = await response.json();
-  
-  console.log(dummyCard)
-}
-
-DUMMYCALL(actualDeckUrl)
 
   return (
     <div className="App">
