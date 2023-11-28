@@ -1,8 +1,9 @@
 import './App.css';
 import { NameForm, ProfessionForm } from './Userinput.tsx'  
-import { CartChoice1 } from './CartChoice.ts'
+import { CartChoice1,CartChoice2 } from './CartChoice.ts'
 import {startUp} from './startUp.ts'
 import { useState,useEffect } from 'react';
+import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
 
 
 function App() {
@@ -10,6 +11,12 @@ function App() {
 const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
+const [decision11, setDecision11]=useState(false)
+const [decision11Success, setDecision11Success]=useState(false)
+const [decision11Failure, setDecision11Failure]=useState(false)
+const [decision1, setDecision1]=useState(false)
+const [decision12Success, setDecision12Success]=useState(false)
+const [decision12Failure, setDecision12Failure]=useState(false)
 
 useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
 
@@ -58,11 +65,27 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
             remain in the cart, what would you like to do?
           </p>
           <br/>
-        <button onClick={()=>{CartChoice1(actualDeckUrl, profession)}}>Abandon the cart to help the person in distress</button>
-        {/* <button onClick={()=>{CartChoice2(actualDeckUrl, profession)}}>Ignore the cry and loot the abandoned cart for supplies</button> */}
+        <button onClick={()=>{CartChoice1(actualDeckUrl, profession,decision1,setDecision1,setDecision11Success,setDecision11Failure)}}>Abandon the cart to help the person in distress</button>
+        <button onClick={()=>{CartChoice2(actualDeckUrl, profession,decision1,setDecision1,setDecision12Success,setDecision12Failure)}}>Start to look through the cart for supplies</button>
         </div>
-        <div className="cartResults">
+        <div className="choiceText">
+          <div>
+          {decision11Success===true &&
+            <CartChoice1SuccessUi/>
+          }
+          </div>
+          <div>
+          {decision11Failure===true &&
+            <CartChoice1FailUi/>}
 
+          </div>
+          <div>
+          {decision12Success===true &&
+            <CartChoice2SuccessUi/>
+          }            
+          {decision12Failure===true &&
+            <CartChoice2FailUi/>}
+          </div>
         </div>
       </body>
     </div>

@@ -1,73 +1,17 @@
-import { DeckDraw,getCard } from './ApiManager.ts'
-import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
+import { getCard } from './ApiManager.ts'
 
 // NOTE
 // 4 components
 // all hide on boot
 // 
 
-// async function CartChoice1(deckIdUrl:string, profession:string) {
-//     console.log("cart Choice 1 triggered")
-//     // const decision11=true
-//     let skillDiff = 7
-//     if (profession === "Wizard") {
-//         skillDiff++
-//     }
-//     else {
-//         skillDiff--
-//     }
-//     console.log("Printout of SkillDiff "+ skillDiff)
-//     await cartDraw(deckIdUrl, skillDiff)
-  
-//     // (async () => {
-//     //     const cartSkillCheck = await deckDraw(deckIdUrl, skillDiff);
-//     //     if (cartSkillCheck == true){
-//     //                 return(CartChoice1SuccessUi)
-//     //             }
-//     //             else{
-//     //                 return(CartChoice1FailUi)
-//     //             }
-//     // })(); 
-// }
-// async function cartDraw(deckIdUrl:string, skillDiff:number){
-//     const cartSkillCheck = await DeckDraw(deckIdUrl, skillDiff)
-//     console.log("pass or Fail check " + cartSkillCheck)
-//     if (cartSkillCheck == true){
-//         console.log(CartChoice1SuccessUi)
-//         return(CartChoice1SuccessUi)
-//     }
-//     else{
-//         console.log(CartChoice1FailUi)
-//         return(CartChoice1FailUi)
-        
-//     }
-// }
+async function CartChoice1(deckIdUrl: string, profession: string, decision1:boolean, setDecision1,setDecision11Success,setDecision11Failure) {
+    setDecision1(true)
+    console.log("cart Choice 1 triggered"+decision1);
+    if(decision1 == true){
+        return(console.log("Test attempted already, please continue elsewhere"))
+    }
 
-// function CartChoice2(deckIdUrl, profession) {
-//     console.log("cart Choice 2 triggered")
-//     const decision12=true
-//     let skillDiff = 7
-     
-//     if (profession === "Rogue") {
-//         skillDiff++
-//     }
-//     else {
-//         skillDiff--
-//     }
-//     if (deckDraw(deckIdUrl, skillDiff) = true) { 
-//         const cartChoice2Success=true 
-//         console.log("skill "+ cartChoice2Success)
-//         return (CartChoice2SuccessUi)
-//     }
-//     else {
-//         const cartChoice2Success=false
-//         console.log("skill "+ cartChoice2Success)
-//         return (CartChoice2FailUi)
-//     }
-    
-// }
-async function CartChoice1(deckIdUrl: string, profession: string) {
-    console.log("cart Choice 1 triggered");
     let skillDiff = 7;
 
     if (profession === "Wizard") {
@@ -82,9 +26,57 @@ async function CartChoice1(deckIdUrl: string, profession: string) {
     try {
         const cardValue = await getCard(deckIdUrl);
         console.log("CARD VALUE TO CHECK " + cardValue);
-        console.log(JSON.stringify(cardValue));
+        if (cardValue >= skillDiff){
+            console.log(skillDiff)
+            console.log("SUCCESSFUL SKILL")
+            setDecision11Success(true)
+            
+        }
+        else{
+            console.log(skillDiff)
+            console.log("FAILURE at skill")
+            setDecision11Failure(true)
+
+        }
     } catch (error) {
         console.error("Error fetching card value:", error);
     }
 }
-export { CartChoice1 }
+async function CartChoice2(deckIdUrl: string, profession: string, decision1:boolean, setDecision1,setDecision12Success,setDecision12Failure) {
+    setDecision1(true)
+    console.log("cart Choice 2 triggered"+decision1);
+    if(decision1 == true){
+        return(console.log("Test attempted already, please continue elsewhere"))
+    }
+
+    let skillDiff = 7;
+
+    if (profession === "Warrior") {
+        skillDiff++;
+    } else {
+        skillDiff--;
+    }
+
+    console.log("Printout of SkillDiff " + skillDiff);
+    console.log("Deck ID before fetch " + deckIdUrl);
+
+    try {
+        const cardValue = await getCard(deckIdUrl);
+        console.log("CARD VALUE TO CHECK " + cardValue);
+        if (cardValue >= skillDiff){
+            console.log(skillDiff)
+            console.log("SUCCESSFUL SKILL")
+            setDecision12Success(true)
+            
+        }
+        else{
+            console.log(skillDiff)
+            console.log("FAILURE at skill")
+            setDecision12Failure(true)
+
+        }
+    } catch (error) {
+        console.error("Error fetching card value:", error);
+    }
+}
+export { CartChoice1, CartChoice2 }

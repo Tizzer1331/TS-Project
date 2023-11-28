@@ -47,3 +47,11 @@
     margin-right: auto;
     width: 20%
   }
+  .choiceText{
+    background-color: #1A090D;
+    color: #D8973C;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  } 

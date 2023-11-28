@@ -33,8 +33,10 @@ async function getCard(deckIdUrl: string) {
             cardValue = 12;
         } else if (newCard.cards[0].value === "JACK") {
             cardValue = 11;
-        } else {
-            cardValue = parseInt(newCard.cards[0].value, 10);
+        } else if (newCard.cards[0].value ==="ACE"){
+            cardValue=1;
+        }else  {
+        cardValue = parseInt(newCard.cards[0].value, 10);
         }
 
         console.log("card value after cleaning " + cardValue);
