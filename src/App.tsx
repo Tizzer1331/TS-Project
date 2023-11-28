@@ -45,29 +45,45 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
           This is the begining of a choose your own adventure path, you will make the decisions and the action you choose may
           have consequences, but first a few decisions.
         </p>
-        <div className="UiStart">
+        <div className="Ui">
         <NameForm setName={setName}/>
         <br/>
+        <div className="flavourText">
+        Your name traveller is <br/>
         {name}
+
+        </div>
         <ProfessionForm setProfession={setProfession}/>
         <br/>
-        {profession}
-
+        <div className="flavourText">
+        you're a {profession}, a wise profession in this age
+        <br/>
+        </div>
+        <br/>
+        </div>
         {/* <p>
           Click here to create a save
         </p>
         <button onClick={()=>{}}>Create Save game</button> */}
-        </div>
 
         <div>
           <p className='flavourText'>
-            You come across a torn up cart, a human cry to your left disturbs your musings on whether any reations
+            You come across a torn up cart, a human cry to your left disturbs your musings on whether any rations
             remain in the cart, what would you like to do?
           </p>
           <br/>
+        </div>
+
+        <div className= "Ui">
+        {decision1 === false &&
+        <div>
         <button onClick={()=>{CartChoice1(actualDeckUrl, profession,decision1,setDecision1,setDecision11Success,setDecision11Failure)}}>Abandon the cart to help the person in distress</button>
         <button onClick={()=>{CartChoice2(actualDeckUrl, profession,decision1,setDecision1,setDecision12Success,setDecision12Failure)}}>Start to look through the cart for supplies</button>
         </div>
+        }
+        </div>
+          
+        <br/>
         <div className="choiceText">
           <div>
           {decision11Success===true &&
@@ -86,6 +102,19 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
           {decision12Failure===true &&
             <CartChoice2FailUi/>}
           </div>
+
+        </div>
+        <br/>
+        <div className="Ui">
+        {decision11Success===true &&
+        <button onClick ={()=>{FUNCTION}}>SUCCESS OPTION1</button>}
+        {decision11Success===true &&
+        <button onClick ={()=>{FUNCTION}}>SUCCESS OPTION2</button>}
+
+        {decision11Failure===true &&
+        <button onClick ={()=>{FUNCTION}}>FAILURE OPTION1</button>}
+        {decision11Failure===true &&
+        <button onClick ={()=>{FUNCTION}}>FAILURE OPTION2</button>}
         </div>
       </body>
     </div>

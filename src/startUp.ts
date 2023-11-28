@@ -1,11 +1,6 @@
 import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
 import {deckFetch} from './ApiManager.ts'
 
-// async function deckCollection(){
-    
-//     const deckUrl=await deckFetch()
-//     return(deckUrl)
-//   }
 
 function startUp(actualDeckUrl:string, setActualDeck){
  deckFetch(setActualDeck)
