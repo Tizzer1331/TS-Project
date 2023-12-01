@@ -5,10 +5,13 @@ import {deckFetch} from './ApiManager.ts'
 function startUp(setActualDeck){
  deckFetch(setActualDeck)
 const gameSave1 = new SaveGame(
+    1331,
     "Riddick",
     "Arkvoodle",
     "Warrior", 
-    13
+    13,
+    []
+
   )
   writeSaveGame(gameSave1)
   readSaveGame()

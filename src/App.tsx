@@ -23,6 +23,7 @@ const [decision11Failure, setDecision11Failure]=useState(false)
 const [decision12Success, setDecision12Success]=useState(false)
 const [decision12Failure, setDecision12Failure]=useState(false)
 
+
 const [decision2, setDecision2]=useState(false)
 const [decision2aSuccess, setDecision2aSuccess]=useState(false)
 const [decision2aFailure, setDecision2aFailure]=useState(false)
@@ -79,8 +80,8 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         {/* <p>
           Click here to create a save
         </p>
-        <button onClick={()=>{}}>Create Save game</button> */}
-
+        <button onClick={()=>{}}>Save game</button> */}
+        {/* {<p>savegame1.id</p>} */}
         <div>
           <p className='flavourText'>
             You come across a torn up cart, a human cry to your left disturbs your musings on whether any rations
