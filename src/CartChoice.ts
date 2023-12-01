@@ -5,7 +5,8 @@ import { getCard } from './ApiManager.ts'
 // all hide on boot
 // 
 
-async function CartChoice1(deckIdUrl: string, profession: string, decision1:boolean, setDecision1,setDecision11Success,setDecision11Failure) {
+async function CartChoice1(deckIdUrl: string, profession: string, decision1:boolean, setDecision1, setDecision11Success,setDecision11Failure) {
+    console.log(typeof(setDecision1))
     setDecision1(true)
     console.log("cart Choice 1 triggered"+decision1);
     if(decision1 == true){

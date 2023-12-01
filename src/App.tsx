@@ -4,20 +4,27 @@ import { CartChoice1,CartChoice2 } from './CartChoice.ts'
 import {startUp} from './startUp.ts'
 import { useState,useEffect } from 'react';
 import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
-
+import{Choice2aFailUi,Choice2aSuccessUi} from "./Choice2aUi.tsx"
+import{Choice2bFailUi,Choice2bSuccessUi} from "./Choice2bUi.tsx"
+import{CardPlay} from "./Test.ts"
 
 function App() {
 
 const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
-const [decision11, setDecision11]=useState(false)
+
+const [decision1, setDecision1]=useState(false)
 const [decision11Success, setDecision11Success]=useState(false)
 const [decision11Failure, setDecision11Failure]=useState(false)
-const [decision1, setDecision1]=useState(false)
 const [decision12Success, setDecision12Success]=useState(false)
 const [decision12Failure, setDecision12Failure]=useState(false)
 
+const [decision2, setDecision2]=useState(false)
+const [decision2aSuccess, setDecision2aSuccess]=useState(false)
+const [decision2aFailure, setDecision2aFailure]=useState(false)
+const [decision2bSuccess, setDecision2bSuccess]=useState(false)
+const [decision2bFailure, setDecision2bFailure]=useState(false)
 useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
 
 
@@ -105,16 +112,48 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
 
         </div>
         <br/>
-        <div className="Ui">
+       
         {decision11Success===true &&
-        <button onClick ={()=>{FUNCTION}}>SUCCESS OPTION1</button>}
-        {decision11Success===true &&
-        <button onClick ={()=>{FUNCTION}}>SUCCESS OPTION2</button>}
+         <p className="flavourText">
+        The cart driver having bandaged himself and found his Ox (by some miracle, the goblins are renowned for eating oxen),
+         offers you a lift to town, though you expect with some ulterior motive.
+        </p>}
+        {decision11Failure===true &&
+      <p className="flavourText">
+        You decide to strirke off on your own away from the mad man and the goblins. Do you take the direct route back through the forest, hopefully avoiding any travellers on 
+        the road. Or take the road directly back to Hounds Tooth , possibly finding more people along the way.
+      </p>}
 
-        {decision11Failure===true &&
-        <button onClick ={()=>{FUNCTION}}>FAILURE OPTION1</button>}
-        {decision11Failure===true &&
-        <button onClick ={()=>{FUNCTION}}>FAILURE OPTION2</button>}
+        <div className="Ui">
+     
+        {decision11Success===true && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,9,"Rogue","Warrior", setDecision2,setDecision2aSuccess,setDecision2bFailure)}}>
+          Ride in the back of his cart for an easy ride back to Hounds Tooth</button>}
+        {decision11Success===true  && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Wizard", setDecision2,setDecision2aSuccess,setDecision2bFailure)}}>
+          Strike off on your own across cutting across the wilds</button>}
+
+
+        {decision11Failure===true && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,5,"Wizard","Warrior",setDecision2,setDecision2bSuccess,setDecision2bFailure)}}>
+          Follow the road towards Hounds Tooth</button>}
+        {decision11Failure===true  && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Warrior",setDecision2,setDecision2bSuccess,setDecision2bFailure)}}>
+          or break off and go off the beaten path to try avoid ambushes</button>}
+        </div>
+        <div className="flavourText">
+        {decision2aSuccess===true &&
+       <Choice2aSuccessUi/>
+        }
+        {decision2aFailure===true &&
+       <Choice2aFailUi/>
+        }
+        {decision2bSuccess===true &&
+       <Choice2bSuccessUi/>
+        }
+        {decision2bFailure===true &&
+       <Choice2bFailUi/>
+        }
         </div>
       </body>
     </div>
