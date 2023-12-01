@@ -6,6 +6,9 @@ import { useState,useEffect } from 'react';
 import{ CartChoice1SuccessUi, CartChoice1FailUi, CartChoice2SuccessUi, CartChoice2FailUi} from './CartChoiceUi.tsx'
 import{Choice2aFailUi,Choice2aSuccessUi} from "./Choice2aUi.tsx"
 import{Choice2bFailUi,Choice2bSuccessUi} from "./Choice2bUi.tsx"
+import{Choice2cFailUi,Choice2cSuccessUi} from "./Choice2cUi.tsx"
+import{Choice2dFailUi,Choice2dSuccessUi} from "./Choice2dUi.tsx"
+
 import{CardPlay} from "./Test.ts"
 
 function App() {
@@ -25,7 +28,12 @@ const [decision2aSuccess, setDecision2aSuccess]=useState(false)
 const [decision2aFailure, setDecision2aFailure]=useState(false)
 const [decision2bSuccess, setDecision2bSuccess]=useState(false)
 const [decision2bFailure, setDecision2bFailure]=useState(false)
-useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
+
+const [decision2cSuccess, setDecision2cSuccess]=useState(false)
+const [decision2cFailure, setDecision2cFailure]=useState(false)
+const [decision2dSuccess, setDecision2dSuccess]=useState(false)
+const [decision2dFailure, setDecision2dFailure]=useState(false)
+useEffect(()=> startUp(setActualDeckUrl),[])
 
 
 
@@ -118,7 +126,7 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
         The cart driver having bandaged himself and found his Ox (by some miracle, the goblins are renowned for eating oxen),
          offers you a lift to town, though you expect with some ulterior motive.
         </p>}
-        {decision11Failure===true &&
+        {decision12Failure===true &&
       <p className="flavourText">
         You decide to strirke off on your own away from the mad man and the goblins. Do you take the direct route back through the forest, hopefully avoiding any travellers on 
         the road. Or take the road directly back to Hounds Tooth , possibly finding more people along the way.
@@ -126,20 +134,21 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
 
         <div className="Ui">
      
-        {decision11Success===true && decision2===false &&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,9,"Rogue","Warrior", setDecision2,setDecision2aSuccess,setDecision2bFailure)}}>
+        {decision12Success===true && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,9,"Rogue","Warrior", setDecision2,setDecision2aSuccess,setDecision2aFailure)}}>
           Ride in the back of his cart for an easy ride back to Hounds Tooth</button>}
-        {decision11Success===true  && decision2===false &&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Wizard", setDecision2,setDecision2aSuccess,setDecision2bFailure)}}>
+        {decision12Success===true  && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Wizard", setDecision2,setDecision2bSuccess,setDecision2bFailure)}}>
           Strike off on your own across cutting across the wilds</button>}
 
 
-        {decision11Failure===true && decision2===false &&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,5,"Wizard","Warrior",setDecision2,setDecision2bSuccess,setDecision2bFailure)}}>
+        {decision12Failure===true && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,5,"Wizard","Warrior",setDecision2,setDecision2cSuccess,setDecision2cFailure)}}>
           Follow the road towards Hounds Tooth</button>}
-        {decision11Failure===true  && decision2===false &&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Warrior",setDecision2,setDecision2bSuccess,setDecision2bFailure)}}>
+        {decision12Failure===true  && decision2===false &&
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,decision2,7,"Rogue","Warrior",setDecision2,setDecision2dSuccess,setDecision2dFailure)}}>
           or break off and go off the beaten path to try avoid ambushes</button>}
+          
         </div>
         <div className="flavourText">
         {decision2aSuccess===true &&
@@ -153,6 +162,19 @@ useEffect(()=> startUp(actualDeckUrl,setActualDeckUrl),[])
         }
         {decision2bFailure===true &&
        <Choice2bFailUi/>
+        }
+
+        {decision2cSuccess===true &&
+       <Choice2cSuccessUi/>
+        }
+        {decision2cFailure===true &&
+       <Choice2cFailUi/>
+        }
+        {decision2dSuccess===true &&
+       <Choice2dSuccessUi/>
+        }
+        {decision2dFailure===true &&
+       <Choice2dFailUi/>
         }
         </div>
       </body>

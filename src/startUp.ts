@@ -2,7 +2,7 @@ import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
 import {deckFetch} from './ApiManager.ts'
 
 
-function startUp(actualDeckUrl:string, setActualDeck){
+function startUp(setActualDeck){
  deckFetch(setActualDeck)
 const gameSave1 = new SaveGame(
     "Riddick",
