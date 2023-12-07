@@ -63,7 +63,9 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         </div>
         <br/>
         </div>
-        <p>
+        
+        <div className="Ui">
+        <p >
           Make sure you have entered your name before saving or loading
           Click here to create a save or Load a save
           
@@ -72,6 +74,7 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         
         {<button onClick={()=>{readSaveGame(name,setDeckDecisons,setActualDeckUrl,setProfession)}}>Load previous Save</button> }
 
+        </div>
         <div>
           <p className='flavourText'>
             You come across a torn up cart, a human cry to your left disturbs your musings on whether any rations
