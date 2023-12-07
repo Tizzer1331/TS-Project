@@ -43,11 +43,11 @@ function readSaveGame(saveName:string,setDeckDecisons, setActualDeckUrl, setProf
     if (!saveData){
         throw new SyntaxError ("Incomplete Data: No Save found")
     }
-    console.log(saveData)
-    console.log("1 LOG " + typeof(saveData))
-    console.log("2 LOG " + saveData.deckUrl)
-    console.log("3 LOG " + saveData.profession)
-    console.log("4 LOG " + saveData.saveDecisions)
+    // console.log(saveData)
+    // console.log("1 LOG " + typeof(saveData))
+    // console.log("2 LOG " + saveData.deckUrl)
+    // console.log("3 LOG " + saveData.profession)
+    // console.log("4 LOG " + saveData.saveDecisions)
     setDeckDecisons(saveData.saveDecisions)
     setActualDeckUrl(saveData.deckUrl)
     setProfession(saveData.profession)
