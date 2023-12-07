@@ -10,7 +10,8 @@ import{Choice2bFailUi,Choice2bSuccessUi} from "./Choice2bUi.tsx"
 import{Choice2cFailUi,Choice2cSuccessUi} from "./Choice2cUi.tsx"
 import{Choice2dFailUi,Choice2dSuccessUi} from "./Choice2dUi.tsx"
 
-import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.ts'
+import {  writeSaveGame, readSaveGame } from './SaveFile.ts'
+
 
 
 function App() {
@@ -19,17 +20,7 @@ const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
 const [deckDecisions,setDeckDecisons] =useState([]);
-
 useEffect(()=> startUp(setActualDeckUrl),[])
-const gameSave2 = new SaveGame(
-  1331,
-  {name},
-  {actualDeckUrl},
-  {profession}, 
-  13,
-  deckDecisions
-  )
-console.log(gameSave2)
 
   return (
     <div className="App">
@@ -57,7 +48,6 @@ console.log(gameSave2)
           have consequences, but first a few decisions.
         </p>
         <div className="Ui">
-          {/* <button onClick={()=>{readSaveGame(gameSave2)}}>Load previous Save</button> */}
         <NameForm setName={setName}/>
         <br/>
         <div className="flavourText">
@@ -73,18 +63,22 @@ console.log(gameSave2)
         </div>
         <br/>
         </div>
-        {/* <p>
-          Click here to create a save
+        <p>
+          Make sure you have entered your name before saving or loading
+          Click here to create a save or Load a save
+          
         </p>
-        <button onClick={()=>{}}>Save game</button> */}
-        {/* {<p>savegame1.id</p>} */}
+        <button onClick={()=>{writeSaveGame(name,actualDeckUrl,profession,deckDecisions)}}>Save game</button> 
+        
+        {<button onClick={()=>{readSaveGame(name,setDeckDecisons,setActualDeckUrl)}}>Load previous Save</button> }
+
         <div>
           <p className='flavourText'>
             You come across a torn up cart, a human cry to your left disturbs your musings on whether any rations
             remain in the cart, what would you like to do?
           </p>
           <br/>
-        </div>console.log(deckDecisions)
+        </div>
 
         <div className= "Ui">
         { deckDecisions[0]=== undefined  &&
@@ -141,10 +135,10 @@ console.log(gameSave2)
           Strike off on your own across cutting across the wilds</button>}
 
 
-        {(deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
+        {deckDecisions[1]===undefined && (deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
         <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,5)}}>
           Follow the road towards Hounds Tooth</button>}
-        {(deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
+        {deckDecisions[1]===undefined && (deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
         <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,7)}}>
           or break off and go off the beaten path to try avoid ambushes</button>}
           

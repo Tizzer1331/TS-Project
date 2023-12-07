@@ -1,7 +1,7 @@
 import { getCard } from "./ApiManager";
 
 async function CardPlay(deckIdUrl: string, profession: string, skillDiff:number,bonusProfession:string, minProfession:string
-    ,deckDecisons,setDeckDecisons,successValue:number) {
+    ,deckDecisons:Array<number>,setDeckDecisons,successValue:number) {
 
     
     if (profession === bonusProfession) {

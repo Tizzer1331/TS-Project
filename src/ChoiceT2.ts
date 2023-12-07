@@ -5,11 +5,10 @@ import { getCard } from './ApiManager.ts'
 // all hide on boot
 // 
 
-async function CartChoice1(deckIdUrl: string, profession: string, decision1:boolean, setDecision1, setDecision11Success,setDecision11Failure) {
-    console.log(typeof(setDecision1))
-    setDecision1(true)
-    console.log("cart Choice 1 triggered"+decision1);
-    if(decision1 == true){
+async function Choice2aa(deckIdUrl: string, profession: string, decision2:boolean, setDecision2,setDecision11Success,setDecision11Failure) {
+    setDecision2(true)
+    console.log("cart Choice 1 triggered"+decision2);
+    if(decision2== true){
         return(console.log("Test attempted already, please continue elsewhere"))
     }
 
@@ -43,10 +42,10 @@ async function CartChoice1(deckIdUrl: string, profession: string, decision1:bool
         console.error("Error fetching card value:", error);
     }
 }
-async function CartChoice2(deckIdUrl: string, profession: string, decision1:boolean, setDecision1,setDecision12Success,setDecision12Failure) {
-    setDecision1(true)
-    console.log("cart Choice 2 triggered"+decision1);
-    if(decision1 == true){
+async function Choice2ab(deckIdUrl: string, profession: string, decision2:boolean, setDecision2,setDecision12Success,setDecision12Failure) {
+    setDecision2(true)
+    console.log("cart Choice 2 triggered"+decision2);
+    if(decision2 == true){
         return(console.log("Test attempted already, please continue elsewhere"))
     }
 
@@ -80,4 +79,4 @@ async function CartChoice2(deckIdUrl: string, profession: string, decision1:bool
         console.error("Error fetching card value:", error);
     }
 }
-export { CartChoice1, CartChoice2 }
+export { Choice2aa, Choice2ab }
