@@ -6,7 +6,7 @@ import { getCard } from './ApiManager.ts'
 // 
 
 async function Choice2aa(deckIdUrl: string, profession: string, decision2:boolean, setDecision2,setDecision11Success,setDecision11Failure) {
-    setDecision2(true)
+
     console.log("cart Choice 1 triggered"+decision2);
     if(decision2== true){
         return(console.log("Test attempted already, please continue elsewhere"))
@@ -22,6 +22,7 @@ async function Choice2aa(deckIdUrl: string, profession: string, decision2:boolea
 
     console.log("Printout of SkillDiff " + skillDiff);
     console.log("Deck ID before fetch " + deckIdUrl);
+    setDecision2(true)
 
     try {
         const cardValue = await getCard(deckIdUrl);
@@ -43,7 +44,6 @@ async function Choice2aa(deckIdUrl: string, profession: string, decision2:boolea
     }
 }
 async function Choice2ab(deckIdUrl: string, profession: string, decision2:boolean, setDecision2,setDecision12Success,setDecision12Failure) {
-    setDecision2(true)
     console.log("cart Choice 2 triggered"+decision2);
     if(decision2 == true){
         return(console.log("Test attempted already, please continue elsewhere"))
@@ -59,10 +59,12 @@ async function Choice2ab(deckIdUrl: string, profession: string, decision2:boolea
 
     console.log("Printout of SkillDiff " + skillDiff);
     console.log("Deck ID before fetch " + deckIdUrl);
+    setDecision2(true)
 
     try {
         const cardValue = await getCard(deckIdUrl);
         console.log("CARD VALUE TO CHECK " + cardValue);
+
         if (cardValue >= skillDiff){
             console.log(skillDiff)
             console.log("SUCCESSFUL SKILL")
