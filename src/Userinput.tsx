@@ -1,4 +1,3 @@
-// import React from 'react';
 import {useState} from 'react';
 
 
@@ -12,7 +11,6 @@ function NameForm({setName}){
     }
   return(
     <form onSubmit={handleSubmit}>
-      {/* <label for = "CharacterName">Character Name</label><br/> */}
       <label>
         Character Name
       <br/>
@@ -37,13 +35,14 @@ function ProfessionForm({setProfession}){
     <form onSubmit={handleSubmit}>
       <label>
         Profession
-      </label>
+      
       <br/>
       <select onChange={(e) => setNewProfession(e.target.value)}>
         <option value="Warrior">Warrior</option>
         <option value="Rogue">Rogue</option>
         <option value="Wizard">Wizard</option>
         </select>
+        </label>
       <input type = "submit"/>
     </form>
   )

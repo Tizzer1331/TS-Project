@@ -22,7 +22,6 @@ async function Choice2aa(deckIdUrl: string, profession: string, decision2:boolea
 
     console.log("Printout of SkillDiff " + skillDiff);
     console.log("Deck ID before fetch " + deckIdUrl);
-    setDecision2(true)
 
     try {
         const cardValue = await getCard(deckIdUrl);

@@ -83,8 +83,8 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         <div className= "Ui">
         { deckDecisions[0]=== undefined  &&
         <div>
-        <button onClick={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,1)}}>Abandon the cart to help the person in distress</button>
-        <button onClick={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,3)}}>Start to look through the cart for supplies</button>
+        <button onClick={()=>{CardPlay(actualDeckUrl, profession,9,"Warrior","Wizard",deckDecisions,setDeckDecisons,1)}}>Abandon the cart to help the person in distress</button>
+        <button onClick={()=>{CardPlay(actualDeckUrl, profession,7,"Rogue","Warrior",deckDecisions,setDeckDecisons,3)}}>Start to look through the cart for supplies</button>
         </div>
         }
 
@@ -128,18 +128,18 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         <div className="Ui">
      
         {deckDecisions[1]===undefined && (deckDecisions[0] ===1 ||  deckDecisions[0] ===2 )&&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,1)}}>
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,5,"Rogue","Warrior",deckDecisions,setDeckDecisons,1)}}>
           Ride in the back of his cart for an easy ride back to Hounds Tooth</button>}
         {deckDecisions[1]===undefined && (deckDecisions[0] ===1 ||  deckDecisions[0] ===2 )&&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,3)}}>
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,7,"Wizard","Rogue",deckDecisions,setDeckDecisons,3)}}>
           Strike off on your own across cutting across the wilds</button>}
 
 
         {deckDecisions[1]===undefined && (deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,5)}}>
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,11,"Wizard","Rogue",deckDecisions,setDeckDecisons,5)}}>
           Follow the road towards Hounds Tooth</button>}
         {deckDecisions[1]===undefined && (deckDecisions[0] ===3 ||  deckDecisions[0] ===4 )&&
-        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,9,"Rogue","Warrior",deckDecisions,setDeckDecisons,7)}}>
+        <button onClick ={()=>{CardPlay(actualDeckUrl, profession,7,"Rogue","Wizard",deckDecisions,setDeckDecisons,7)}}>
           or break off and go off the beaten path to try avoid ambushes</button>}
           
         </div>
