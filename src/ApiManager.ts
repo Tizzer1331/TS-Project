@@ -1,7 +1,3 @@
-
-
-
-
 async function deckFetch(setActualDeck){
     const response = await fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
     const newDeck = await response.json();

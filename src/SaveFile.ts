@@ -12,14 +12,14 @@ class SaveGame{
     deckUrl:string;
     profession:string;
     health:number
-    saveData:Array<number>
+    saveDecisions:Array<number>
     constructor(
         ID:number,
         charName:string,
         deckUrl:string,
         profession:string,
         health:number,
-        saveData:Array<number>
+        saveDecisions:Array<number>
     )
     {
     this.ID=ID
@@ -27,24 +27,35 @@ class SaveGame{
     this.deckUrl=deckUrl;
     this.profession=profession;
     this.health=health;
-    this.saveData=saveData;
+    this.saveDecisions=saveDecisions;
     }
 }
 
-function readSaveGame(saveName:string,setDeckDecisons,setActualDeckUrl){
+function readSaveGame(saveName:string,setDeckDecisons, setActualDeckUrl, setProfession){
     if( saveName ==""){
         alert("Please enter the name for the save and your character")
     }
     else {
-        //INSERT TRY CATCH HERE for incorrect name
+    try{
     console.log("READ FILE: "+localStorage.getItem(saveName))
-    let saveData=localStorage.getItem(saveName)
-    saveData =JSON.parse(saveData)
-    console.log(saveData)
-    console.log(typeof(saveData))
-    // setDeckDecisons(saveData.deckDecisions)
-    // setActualDeckUrl(saveData.deckUrl)
-    // setProfession(saveData.profession)
+    const localData=localStorage.getItem(saveName)
+    const saveData =JSON.parse(localData)
+    if (!saveData){
+        throw new SyntaxError ("Incomplete Data: No Save found")
+    }
+    // console.log(saveData)
+    // console.log("1 LOG " + typeof(saveData))
+    // console.log("2 LOG " + saveData.deckUrl)
+    // console.log("3 LOG " + saveData.profession)
+    // console.log("4 LOG " + saveData.saveDecisions)
+    setDeckDecisons(saveData.saveDecisions)
+    setActualDeckUrl(saveData.deckUrl)
+    setProfession(saveData.profession)
+    } 
+    
+    catch(error){
+    alert("alert please write a saved character name")
+    }
 }
 }
 
@@ -61,7 +72,7 @@ function writeSaveGame(saveName:string, actualDeckUrl:string, profession:string,
             13,
             deckDecisions
           )
-    localStorage.setItem(saveName,JSON.stringify(gameSave1))
-    console.log(localStorage.getItem(saveName))
+        localStorage.setItem(saveName,JSON.stringify(gameSave1))
+        console.log(localStorage.getItem(saveName))
     }
 }

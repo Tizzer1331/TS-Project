@@ -70,7 +70,7 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         </p>
         <button onClick={()=>{writeSaveGame(name,actualDeckUrl,profession,deckDecisions)}}>Save game</button> 
         
-        {<button onClick={()=>{readSaveGame(name,setDeckDecisons,setActualDeckUrl)}}>Load previous Save</button> }
+        {<button onClick={()=>{readSaveGame(name,setDeckDecisons,setActualDeckUrl,setProfession)}}>Load previous Save</button> }
 
         <div>
           <p className='flavourText'>
