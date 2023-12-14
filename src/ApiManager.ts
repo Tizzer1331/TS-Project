@@ -21,32 +21,52 @@ async function getCard(deckIdUrl: string) {
         const newCard = await response.json();
         console.log("card Drawn ", newCard);
 
-        let cardValue: number = 0;
+        // let cardValue: number = 0;
 
-        if (newCard.cards[0].value === "KING") {
-            cardValue = 13;
-        } else if (newCard.cards[0].value === "QUEEN") {
-            cardValue = 12;
-        } else if (newCard.cards[0].value === "JACK") {
-            cardValue = 11;
-        } else if (newCard.cards[0].value ==="ACE"){
-            cardValue=1;
-        }else  {
-        cardValue = parseInt(newCard.cards[0].value, 10);
-        }
+        // if (newCard.cards[0].value === "KING") {
+        //     cardValue = 13;
+        // } else if (newCard.cards[0].value === "QUEEN") {
+        //     cardValue = 12;
+        // } else if (newCard.cards[0].value === "JACK") {
+        //     cardValue = 11;
+        // } else if (newCard.cards[0].value ==="ACE"){
+        //     cardValue=1;
+        // }else  {
+        // cardValue = parseInt(newCard.cards[0].value, 10);
+        // }
 
-        console.log("card value after cleaning " + cardValue);
-        console.log(JSON.stringify(cardValue));
-        return cardValue;
+        // console.log("card value after cleaning " + cardValue);
+        // console.log(JSON.stringify(cardValue));
+        // return cardValue;
+       return CardLogic(newCard.cards[0].value)
     } catch (error) {
         console.error("Error fetching card:", error);
         throw error; // Rethrow the error to be caught by the calling function
     }
 }
 
+function CardLogic(newCard:string){
 
+let cardValue: number = 0;
+
+if ( newCard=== "KING") {
+    cardValue = 13;
+} else if (newCard=== "QUEEN") {
+    cardValue = 12;
+} else if (newCard=== "JACK") {
+    cardValue = 11;
+} else if (newCard==="ACE"){
+    cardValue=1;
+}else  {
+cardValue = parseInt(newCard, 10);
+}
+
+console.log("card value after cleaning " + cardValue);
+console.log(JSON.stringify(cardValue));
+return cardValue;
+}
 
 export {deckFetch}
 export{getCard}
-
+export {CardLogic}
 
