@@ -34,3 +34,4 @@ async function CardPlay(deckIdUrl: string, profession: string, skillDiff:number,
         }
     }
 export{CardPlay}
+
