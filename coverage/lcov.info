@@ -4,11 +4,11 @@ FN:1,deckFetch
 FN:11,getCard
 FN:28,CardLogic
 FNF:3
-FNH:2
-FNDA:1,deckFetch
+FNH:1
+FNDA:0,deckFetch
 FNDA:0,getCard
 FNDA:5,CardLogic
-DA:2,1
+DA:2,0
 DA:3,0
 DA:4,0
 DA:5,0
@@ -36,7 +36,7 @@ DA:44,5
 DA:45,5
 DA:46,5
 LF:27
-LH:14
+LH:13
 BRDA:16,0,0,0
 BRDA:16,0,1,0
 BRDA:32,1,0,1
