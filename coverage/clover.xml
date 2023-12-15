@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702634063144" clover="3.2.0">
-  <project timestamp="1702634063145" name="All files">
+<coverage generated="1702640777359" clover="3.2.0">
+  <project timestamp="1702640777359" name="All files">
     <metrics statements="27" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="1" elements="40" coveredelements="22" complexity="0" loc="27" ncloc="27" packages="1" files="1" classes="1"/>
     <file name="ApiManager.ts" path="/home/jon.tyrrell/vite-project/src/ApiManager.ts">
       <metrics statements="27" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="1"/>

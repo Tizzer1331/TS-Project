@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/jon.tyrrell/vite-project/Test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="51"/>
-    <testCase name="Checking card logic" duration="8"/>
-    <testCase name="Checking card logic" duration="12"/>
+  <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
+    <testCase name="Checking card logic" duration="57"/>
+    <testCase name="Checking card logic" duration="7"/>
+    <testCase name="Checking card logic" duration="7"/>
+    <testCase name="Checking card logic" duration="3"/>
     <testCase name="Checking card logic" duration="5"/>
-    <testCase name="Checking card logic" duration="15"/>
   </file>
 </testExecutions>
