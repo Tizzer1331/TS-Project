@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/jon.tyrrell/vite-project/Test/DecisionRender.test.js">
+  </file>
+  <file path="/home/jon.tyrrell/vite-project/Test/CardLogic.test.js">
+    <testCase name="Checking card logic" duration="57"/>
+    <testCase name="Checking card logic" duration="6"/>
+    <testCase name="Checking card logic" duration="8"/>
+    <testCase name="Checking card logic" duration="10"/>
+    <testCase name="Checking card logic" duration="6"/>
+  </file>
+  <file path="/home/jon.tyrrell/vite-project/Test/ApiCall.test.js">
+    <testCase name="Checking orginal API call" duration="103">
+      <failure message="FetchError: request to https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1 failed, reason: connect ECONNREFUSED 172.67.197.120:443"><![CDATA[FetchError: request to https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1 failed, reason: connect ECONNREFUSED 172.67.197.120:443
+    at ClientRequest.<anonymous> (/home/jon.tyrrell/vite-project/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:513:28)
+    at TLSSocket.socketErrorListener (node:_http_client:494:9)
+    at TLSSocket.emit (node:events:513:28)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)]]></failure>
+    </testCase>
+  </file>
+</testExecutions>
