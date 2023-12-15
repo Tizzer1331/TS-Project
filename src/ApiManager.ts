@@ -10,34 +10,14 @@ async function deckFetch(setActualDeck){
 
 async function getCard(deckIdUrl: string) {
     console.log("deck url " + deckIdUrl);
-
     try {
         const response = await fetch(deckIdUrl);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch card. Status: ${response.status}`);
         }
-
         const newCard = await response.json();
         console.log("card Drawn ", newCard);
-
-        // let cardValue: number = 0;
-
-        // if (newCard.cards[0].value === "KING") {
-        //     cardValue = 13;
-        // } else if (newCard.cards[0].value === "QUEEN") {
-        //     cardValue = 12;
-        // } else if (newCard.cards[0].value === "JACK") {
-        //     cardValue = 11;
-        // } else if (newCard.cards[0].value ==="ACE"){
-        //     cardValue=1;
-        // }else  {
-        // cardValue = parseInt(newCard.cards[0].value, 10);
-        // }
-
-        // console.log("card value after cleaning " + cardValue);
-        // console.log(JSON.stringify(cardValue));
-        // return cardValue;
        return CardLogic(newCard.cards[0].value)
     } catch (error) {
         console.error("Error fetching card:", error);
