@@ -1,7 +1,7 @@
 //SUCCESS
 function Choice2aSuccessUi(){
 return(
-<p>
+<p data-testid="UiTest1">
 You pull yourself up into the cart , moving aside some supplies and you settle your weary head,
 slinging your pack onto the cart with the jingle of gold and a few coins falling out. 
 it's been a long journey already and a nice easy trip to Hounds Tooth would be a welcome reward for a hard day, 
@@ -17,7 +17,7 @@ Where now? you think to yourself
 //Failure
 function Choice2aFailUi(){
 return(
-<p>
+<p data-testid="UiTest2">
 You pull yourself up into the cart , moving aside some supplies and you settle your weary head, 
 slinging the pack onto the cart with the jingle of gold and a few coins falling out. 
 it's been a long journey already and a nice easy trip to Hounds Tooth would be a welcome reward for a hard day, 

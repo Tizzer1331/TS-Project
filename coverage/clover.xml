@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702640777359" clover="3.2.0">
-  <project timestamp="1702640777359" name="All files">
-    <metrics statements="27" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="1" elements="40" coveredelements="22" complexity="0" loc="27" ncloc="27" packages="1" files="1" classes="1"/>
+<coverage generated="1702653884463" clover="3.2.0">
+  <project timestamp="1702653884463" name="All files">
+    <metrics statements="35" coveredstatements="21" conditionals="10" coveredconditionals="8" methods="11" coveredmethods="9" elements="56" coveredelements="38" complexity="0" loc="35" ncloc="35" packages="1" files="5" classes="5"/>
     <file name="ApiManager.ts" path="/home/jon.tyrrell/vite-project/src/ApiManager.ts">
       <metrics statements="27" coveredstatements="13" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="1"/>
       <line num="2" count="0" type="stmt"/>
@@ -31,6 +31,26 @@
       <line num="44" count="5" type="stmt"/>
       <line num="45" count="5" type="stmt"/>
       <line num="46" count="5" type="stmt"/>
+    </file>
+    <file name="Choice2aUi.tsx" path="/home/jon.tyrrell/vite-project/src/Choice2aUi.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+    <file name="Choice2bUi.tsx" path="/home/jon.tyrrell/vite-project/src/Choice2bUi.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+    <file name="Choice2cUi.tsx" path="/home/jon.tyrrell/vite-project/src/Choice2cUi.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+    </file>
+    <file name="Choice2dUi.tsx" path="/home/jon.tyrrell/vite-project/src/Choice2dUi.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -1,7 +1,7 @@
 //Success
 function Choice2dSuccessUi(){
     return(
-<p>
+<p data-testid="UiTest7"> 
     You strike out across the forest, sure of your sense of direction and heading for the jagged mountains that give the town of Hound's tooth its name.
          Travelling across the forest is hard work and the pack weighty with gold doesn't help at all. You forage what you can of the native flora to fill your belly,
           mushrooms and berries mostly. The night draws in and the realisation that the journey will not be over tonight.
@@ -13,7 +13,7 @@ function Choice2dSuccessUi(){
 //FAILURE
 function Choice2dFailUi(){
     return(
-<p>
+<p data-testid="UiTest8">
 You strike out across the forest, sure of your sense of direction and heading for the jagged mountains that give the town of Hound's tooth its name.
  Travelling across the forest is hard work and the pack weighty with gold doesn't help at all. You forage what you can of the native flora to fill your belly, 
  mushrooms and berries mostly. The night draws in and the realisation that the journey will not be over tonight fills you with trepidation. 
