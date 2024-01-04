@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="60"/>
+    <testCase name="Checking card logic" duration="71"/>
+    <testCase name="Checking card logic" duration="8"/>
+    <testCase name="Checking card logic" duration="5"/>
+    <testCase name="Checking card logic" duration="10"/>
     <testCase name="Checking card logic" duration="6"/>
-    <testCase name="Checking card logic" duration="4"/>
-    <testCase name="Checking card logic" duration="3"/>
-    <testCase name="Checking card logic" duration="4"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/UiRender.test.js">
-    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="51"/>
-    <testCase name="loads items test text is rendered correctly 2AFail" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="61"/>
+    <testCase name="loads items test text is rendered correctly 2AFail" duration="7"/>
+    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="18"/>
     <testCase name="loads items test text is rendered correctly 2BFail" duration="4"/>
     <testCase name="loads items test text is rendered correctly 2CSuccess" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2CFail" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2CFail" duration="7"/>
+    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="10"/>
     <testCase name="loads items test text is rendered correctly 2DFail" duration="4"/>
+  </file>
+  <file path="/home/jon.tyrrell/vite-project/test/DecisionRender.test.js">
+    <testCase name="should show first A button" duration="222"/>
+    <testCase name="should show first B button" duration="22"/>
   </file>
 </testExecutions>
