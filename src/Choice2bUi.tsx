@@ -1,7 +1,7 @@
 //Success
 function Choice2bSuccessUi(){
     return(
-<p data-testid="UiTestC">
+<p data-testid="UiTest3">
 You strike out across the forest, sure of your sense of direction and heading for the jagged mountains that give the town of Hound's tooth its name. 
 Travelling across the forest is hard work and the pack weighty with gold doesn't help at all.
 You forage what you can of the native flora to fill your belly, mushrooms and berries mostly. The night draws in and the realisation that the journey will not be over tonight.
@@ -12,7 +12,7 @@ You start looking for shelter as you approach a clearing with a cave mouth in it
 //FAILURE
 function Choice2bFailUi(){
     return(
-<p data-testid="UiTestD">
+<p data-testid="UiTest4">
 You strike out across the forest, sure of your sense of direction and heading for the jagged mountains that give the town of Hound's tooth its name.
  Travelling across the forest is hard work and the pack weighty with gold doesn't help at all. 
  You forage what you can of the native flora to fill your belly, mushrooms and berries mostly. 

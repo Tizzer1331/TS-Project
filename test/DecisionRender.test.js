@@ -2,7 +2,8 @@
 * @jest-enviroment jsdom 
 */
 import '@testing-library/jest-dom'
-import{render, screen} from "@testing-library/react"
+import { getByText, getByTestId } from '@testing-library/react'
+import{fireEvent, render, screen} from "@testing-library/react"
 import App from "../src/App.tsx"
 import React from 'react'
 import {expect, jest, test} from '@jest/globals';
@@ -27,6 +28,7 @@ beforeEach (()=>{
 render(<App/>)
 });
 describe("Playthrough test", function () {
+    
 it('should show first A button', ()=>{
     const successUiElement=screen.getByTestId('UiTestA');
     expect(successUiElement).toBeInTheDocument();
@@ -36,9 +38,15 @@ it('should show first B button', ()=>{
     const successUiElement=screen.getByTestId('UiTestB');
     expect(successUiElement).toBeInTheDocument();
 })
- 
-it("Checking tier 2", ()=>{  
-    const successUiElement=screen.getByTestId('UiTestC');
+
+it("Check Name logic", ()=>{ 
+    act(()=>{
+    fireEvent.change(screen.getByLabelText('Character Name'),{target:{value:"Clint"}})
+    fireEvent.click(screen.getByText("Confirm Name"),)
+
+})
+    const successUiElement=screen.getByText("Clint");
+    
     expect(successUiElement).toBeInTheDocument();
 })
 });

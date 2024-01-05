@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704446064403" clover="3.2.0">
-  <project timestamp="1704446064404" name="All files">
-    <metrics statements="108" coveredstatements="38" conditionals="70" coveredconditionals="38" methods="36" coveredmethods="15" elements="214" coveredelements="91" complexity="0" loc="108" ncloc="108" packages="1" files="11" classes="11"/>
+<coverage generated="1704457500330" clover="3.2.0">
+  <project timestamp="1704457500330" name="All files">
+    <metrics statements="108" coveredstatements="43" conditionals="70" coveredconditionals="38" methods="36" coveredmethods="17" elements="214" coveredelements="98" complexity="0" loc="108" ncloc="108" packages="1" files="11" classes="11"/>
     <file name="ApiManager.ts" path="/home/jon.tyrrell/vite-project/src/ApiManager.ts">
       <metrics statements="27" coveredstatements="17" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="2"/>
       <line num="2" count="3" type="stmt"/>
@@ -34,20 +34,20 @@
     </file>
     <file name="App.tsx" path="/home/jon.tyrrell/vite-project/src/App.tsx">
       <metrics statements="14" coveredstatements="6" conditionals="48" coveredconditionals="30" methods="10" coveredmethods="2"/>
-      <line num="19" count="4" type="stmt"/>
-      <line num="20" count="3" type="stmt"/>
-      <line num="21" count="3" type="stmt"/>
-      <line num="22" count="3" type="stmt"/>
-      <line num="23" count="3" type="stmt"/>
-      <line num="25" count="3" type="stmt"/>
-      <line num="73" count="0" type="stmt"/>
-      <line num="75" count="0" type="stmt"/>
-      <line num="89" count="0" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
+      <line num="21" count="5" type="stmt"/>
+      <line num="22" count="5" type="stmt"/>
+      <line num="23" count="5" type="stmt"/>
+      <line num="25" count="5" type="stmt"/>
+      <line num="74" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
       <line num="90" count="0" type="stmt"/>
-      <line num="134" count="0" type="stmt"/>
-      <line num="137" count="0" type="stmt"/>
-      <line num="142" count="0" type="stmt"/>
-      <line num="145" count="0" type="stmt"/>
+      <line num="91" count="0" type="stmt"/>
+      <line num="135" count="0" type="stmt"/>
+      <line num="138" count="0" type="stmt"/>
+      <line num="143" count="0" type="stmt"/>
+      <line num="146" count="0" type="stmt"/>
     </file>
     <file name="CartChoiceUi.tsx" path="/home/jon.tyrrell/vite-project/src/CartChoiceUi.tsx">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
@@ -123,20 +123,20 @@
       <line num="33" count="0" type="stmt"/>
     </file>
     <file name="Userinput.tsx" path="/home/jon.tyrrell/vite-project/src/Userinput.tsx">
-      <metrics statements="14" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <line num="5" count="3" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="12" count="3" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="28" count="3" type="stmt"/>
-      <line num="29" count="3" type="stmt"/>
+      <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="6" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
+      <line num="29" count="5" type="stmt"/>
       <line num="30" count="0" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
-      <line num="34" count="3" type="stmt"/>
+      <line num="34" count="5" type="stmt"/>
       <line num="40" count="0" type="stmt"/>
     </file>
     <file name="startUp.ts" path="/home/jon.tyrrell/vite-project/src/startUp.ts">

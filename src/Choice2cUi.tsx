@@ -1,6 +1,6 @@
 function Choice2cSuccessUi(){
     return(
-<p data-testid="UiTestE">
+<p data-testid="UiTest5">
 You follow the road down towards Hounds Tooth, the bright summer day lightening your spirits after the previous events. 
 The walk is easy and bar the pack weighing you down it is enjoyable. 
 As the late afternoon sun starts to drift to the horizon you realise it's unlikely that you'll reach your destination before Nightfall and it is rumoured there is a Manticore in this forest.
@@ -13,7 +13,7 @@ You approach a Cave mouth light one of the few torches you have left and head in
 
 function Choice2cFailUi(){
     return(
-<p data-testid="UiTestF">
+<p data-testid="UiTest6">
 You follow the road down towards Hounds Tooth, the bright summer day lightening your spirits after the previous events. 
 The walk is easy and bar the pack weighing you down it is enjoyable.
 As the late afternoon sun starts to drift to the horizon you realise it's unlikely that you'll reach your destination before Nightfall and it is rumoured there is a Manticores in this forest.

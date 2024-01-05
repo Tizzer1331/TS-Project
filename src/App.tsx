@@ -52,8 +52,9 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         <br/>
         <div className="flavourText">
         Your name traveller is <br/>
+        <p>
         {name}
-
+        </p>
         </div>
         <ProfessionForm setProfession={setProfession}/>
         <br/>

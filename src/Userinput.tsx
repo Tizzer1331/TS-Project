@@ -10,14 +10,14 @@ function NameForm({setName}){
       alert('The Name you entered was: ' + newName) 
     }
   return(
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-testid="NameInputTextBox" >
       <label>
         Character Name
       <br/>
       <input type="text" value={newName}
       onChange={(e) => setNewName(e.target.value)}/>
       </label>
-      <input type = "submit"/>
+      <input type = "submit" value="Confirm Name"/>
     </form>
 
 
@@ -43,7 +43,7 @@ function ProfessionForm({setProfession}){
         <option value="Wizard">Wizard</option>
         </select>
         </label>
-      <input type = "submit"/>
+      <input type = "submit" value="Confirm Profession"/>
     </form>
   )
 
