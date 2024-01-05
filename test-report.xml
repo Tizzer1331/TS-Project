@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="64"/>
-    <testCase name="Checking card logic" duration="16"/>
-    <testCase name="Checking card logic" duration="6"/>
-    <testCase name="Checking card logic" duration="18"/>
-    <testCase name="Checking card logic" duration="12"/>
+    <testCase name="Checking card logic" duration="78"/>
+    <testCase name="Checking card logic" duration="5"/>
+    <testCase name="Checking card logic" duration="3"/>
+    <testCase name="Checking card logic" duration="4"/>
+    <testCase name="Checking card logic" duration="5"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/UiRender.test.js">
-    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="48"/>
-    <testCase name="loads items test text is rendered correctly 2AFail" duration="27"/>
-    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="7"/>
-    <testCase name="loads items test text is rendered correctly 2BFail" duration="6"/>
-    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="6"/>
-    <testCase name="loads items test text is rendered correctly 2CFail" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2DFail" duration="16"/>
+    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="51"/>
+    <testCase name="loads items test text is rendered correctly 2AFail" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2BFail" duration="3"/>
+    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="16"/>
+    <testCase name="loads items test text is rendered correctly 2CFail" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2DFail" duration="3"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/DecisionRender.test.js">
-    <testCase name="Playthrough test should show first A button" duration="180"/>
-    <testCase name="Playthrough test should show first B button" duration="39"/>
-    <testCase name="Playthrough test Check Name logic" duration="158"/>
   </file>
 </testExecutions>
