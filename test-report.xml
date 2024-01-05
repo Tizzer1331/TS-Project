@@ -1,24 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="71"/>
-    <testCase name="Checking card logic" duration="8"/>
-    <testCase name="Checking card logic" duration="5"/>
-    <testCase name="Checking card logic" duration="10"/>
+    <testCase name="Checking card logic" duration="146"/>
+    <testCase name="Checking card logic" duration="16"/>
     <testCase name="Checking card logic" duration="6"/>
+    <testCase name="Checking card logic" duration="15"/>
+    <testCase name="Checking card logic" duration="5"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/UiRender.test.js">
-    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="61"/>
-    <testCase name="loads items test text is rendered correctly 2AFail" duration="7"/>
-    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="18"/>
-    <testCase name="loads items test text is rendered correctly 2BFail" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="67"/>
+    <testCase name="loads items test text is rendered correctly 2AFail" duration="11"/>
+    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2BFail" duration="5"/>
     <testCase name="loads items test text is rendered correctly 2CSuccess" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2CFail" duration="7"/>
-    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="10"/>
-    <testCase name="loads items test text is rendered correctly 2DFail" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2CFail" duration="9"/>
+    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2DFail" duration="6"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/DecisionRender.test.js">
-    <testCase name="should show first A button" duration="222"/>
-    <testCase name="should show first B button" duration="22"/>
+    <testCase name="Intial Renders should show first A button" duration="219"/>
+    <testCase name="Intial Renders should show first B button" duration="28"/>
+    <testCase name="Intial Renders Checking tier 2" duration="63">
+      <failure message="TestingLibraryElementError: Unable to find an element by: [data-testid=&quot;UiTestC&quot;]"><![CDATA[TestingLibraryElementError: Unable to find an element by: [data-testid="UiTestC"]
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <header
+      class="App-header"
+    />
+    <body
+      class="background"
+    >
+      <div
+        class="titleSpeech"
+      >
+        <h1>
+          Dungeon Delve
+        </h1>
+        <h4>
+          A fond farewell to Chose your own adventure stories
+        </h4>
+      </div>
+      <br />
+      <br />
+      <img
+        alt="treasure"
+        class="treasureImg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU"
+      />
+      <p
+        class="flavourText"
+      >
+        Welcome Adventurer, your recent trip to the Caves of Forwick was most profitable, you looted cleanly and managed to escape with your life, now your rations runs empty and the gold weighs heavy on your back. You are traversing the forests of the nearby township of Hounds tooth, a town carved into the side of a mountain. This is the begining of a choose your own adventure path, you will make the decisions and the action you choose may have consequences, but first a few decisions.
+      </p>
+      <div
+        class="Ui"
+      >
+        <form>
+          <label>
+            Character Name
+            <br />
+            <input
+              type="text"
+              value=""
+            />
+          </label>
+          <input
+            type="submit"
+          />
+        </form>
+        <br />
+        <div
+          class="flavourText"
+        >
+          Your name traveller is 
+          <br />
+        </div>
+        <form>
+          <label>
+            Profession
+            <br />
+            <select>
+              <option
+                value="Warrior"
+              >
+                Warrior
+              </option>
+              <option
+                value="Rogue"
+              >
+                Rogue
+              </option>
+              <option
+                value="Wizard"
+              >
+                Wizard
+              </option>
+            </select>
+          </label>
+          <input
+            type="submit"
+          />
+        </form>
+        <br />
+        <div
+          class="flavourText"
+        >
+          you're a 
+          Warrior
+          , a wise profession in this age
+          <br />
+        </div>
+        <br />
+      </div>
+      <div
+        class="Ui"
+      >
+        <p>
+          Make sure you have entered your name before saving or loading Click here to create a save or Load a save
+        </p>
+        <button>
+          Save game
+        </button>
+        <button>
+          Load previous Save
+        </button>
+      </div>
+      <div>
+        <p
+          class="flavourText"
+        >
+          You come across a torn up cart, a human cry to your left disturbs your musings on whether any rations remain in the cart, what would you like to do?
+        </p>
+        <br />
+      </div>
+      <div
+        class="Ui"
+      >
+        <div>
+          <button
+            data-testid="UiTestA"
+          >
+            Abandon the cart to help the person in distress
+          </button>
+          <button
+            data-testid="UiTestB"
+          >
+            Start to look through the cart for supplies
+          </button>
+        </div>
+      </div>
+      <br />
+      <div
+        class="choiceText"
+      >
+        <div />
+        <div />
+        <div />
+      </div>
+      <br />
+      <div
+        class="Ui"
+      />
+      <div
+        class="flavourText"
+      />
+    </body>
+  </div>
+</body>
+    at Object.getElementError (/home/jon.tyrrell/vite-project/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/jon.tyrrell/vite-project/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+    at /home/jon.tyrrell/vite-project/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+    at /home/jon.tyrrell/vite-project/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+    at Object.getByTestId (/home/jon.tyrrell/vite-project/test/DecisionRender.test.js:41:35)
+    at Promise.then.completed (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:121:9)
+    at run (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/testWorker.js:106:12)]]></failure>
+    </testCase>
   </file>
 </testExecutions>

@@ -86,7 +86,7 @@ useEffect(()=> startUp(setActualDeckUrl),[])
         <div className= "Ui">
         { deckDecisions[0]=== undefined  &&
         <div>
-        <button data-testid="UiTestA" onClick={()=>{CardPlay(actualDeckUrl, profession,9,"Warrior","Wizard",deckDecisions,setDeckDecisons,1)}}>Abandon the cart to help the person in distress</button>
+        <button name='' data-testid="UiTestA" onClick={()=>{CardPlay(actualDeckUrl, profession,9,"Warrior","Wizard",deckDecisions,setDeckDecisons,1)}}>Abandon the cart to help the person in distress</button>
         <button data-testid="UiTestB" onClick={()=>{CardPlay(actualDeckUrl, profession,7,"Rogue","Warrior",deckDecisions,setDeckDecisons,3)}}>Start to look through the cart for supplies</button>
         </div>
         }
