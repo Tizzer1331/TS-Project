@@ -21,7 +21,7 @@ const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
 const [deckDecisions,setDeckDecisons] =useState([]);
 useEffect(()=> {startUp(setActualDeckUrl)},[])
-
+console.log(actualDeckUrl)
   return (
     <>
       <header className="App-header">

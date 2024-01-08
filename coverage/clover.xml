@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704712697191" clover="3.2.0">
-  <project timestamp="1704712697191" name="All files">
-    <metrics statements="109" coveredstatements="62" conditionals="70" coveredconditionals="40" methods="36" coveredmethods="22" elements="215" coveredelements="124" complexity="0" loc="109" ncloc="109" packages="1" files="11" classes="11"/>
+<coverage generated="1704724809310" clover="3.2.0">
+  <project timestamp="1704724809311" name="All files">
+    <metrics statements="110" coveredstatements="63" conditionals="70" coveredconditionals="40" methods="36" coveredmethods="22" elements="216" coveredelements="125" complexity="0" loc="110" ncloc="110" packages="1" files="11" classes="11"/>
     <file name="ApiManager.ts" path="/home/jon.tyrrell/vite-project/src/ApiManager.ts">
       <metrics statements="27" coveredstatements="24" conditionals="10" coveredconditionals="9" methods="3" coveredmethods="3"/>
       <line num="2" count="5" type="stmt"/>
@@ -33,12 +33,13 @@
       <line num="46" count="5" type="stmt"/>
     </file>
     <file name="App.tsx" path="/home/jon.tyrrell/vite-project/src/App.tsx">
-      <metrics statements="14" coveredstatements="7" conditionals="48" coveredconditionals="30" methods="10" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="8" conditionals="48" coveredconditionals="30" methods="10" coveredmethods="3"/>
       <line num="19" count="10" type="stmt"/>
       <line num="20" count="9" type="stmt"/>
       <line num="21" count="9" type="stmt"/>
       <line num="22" count="9" type="stmt"/>
       <line num="23" count="9" type="stmt"/>
+      <line num="24" count="9" type="stmt"/>
       <line num="25" count="9" type="stmt"/>
       <line num="74" count="0" type="stmt"/>
       <line num="76" count="0" type="stmt"/>

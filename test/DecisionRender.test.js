@@ -55,20 +55,25 @@ render(<App/>)
 const fetchMock=jest
 .spyOn(global, 'fetch')
 // .mockImplementation(()=>{
-.mockImplementation(()=>Promise.resolve({ json:()=>Promise.resolve([
-// return(
-//     "success": true,
-//     "deck_id": "3p40paa87x90",
-//     "shuffled": true,
-//     "remaining": 52
+//     mockImplementation(() => 
+//    Promise.resolve({ 
+//       json: () => Promise.resolve(/*json goes here*/),
+//    })
 // )
-// }
-// )
+.mockImplementation(()=>Promise.resolve({ json:()=>Promise.resolve(
+`
+    "success": true,
+    "deck_id": "3p40paa87x90",
+    "shuffled": true,
+    "remaining": 52
+    `)}
+))
     
-])}))
+// ])}))
 describe("Playthrough test", function () {
     
 it('should show first A button', ()=>{
+
     const successUiElement=screen.getByTestId('UiTestA');
     expect(successUiElement).toBeInTheDocument();
 })
