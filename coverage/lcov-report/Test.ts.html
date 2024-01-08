@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">41.17% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>7/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">41.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>7/17</span>
             </div>
         
             
@@ -107,26 +107,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -134,6 +128,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,21 +141,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getCard } from "./ApiManager";
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >CardPlay(</span>deckIdUrl: string, profession: string, skillDiff:number,bonusProfession:string, minProfession:string
+async function CardPlay(deckIdUrl: string, profession: string, skillDiff:number,bonusProfession:string, minProfession:string
     ,deckDecisons:Array&lt;number&gt;,setDeckDecisons,successValue:number) {
 &nbsp;
     
-<span class="cstat-no" title="statement not covered" >    if (profession === bonusProfession) {</span>
-<span class="cstat-no" title="statement not covered" >        skillDiff++;</span>
-    } else <span class="cstat-no" title="statement not covered" >if( profession===minProfession) {</span>
+    if (profession === bonusProfession) {
+        skillDiff++;
+    } else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if( profession===minProfession) {</span>
 <span class="cstat-no" title="statement not covered" >        skillDiff--;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        console.log("Printout of SkillDiff " + skillDiff);</span>
-<span class="cstat-no" title="statement not covered" >        console.log("Deck ID before fetch " + deckIdUrl);</span>
+        console.log("Printout of SkillDiff " + skillDiff);
+        console.log("Deck ID before fetch " + deckIdUrl);
     
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const cardValue = <span class="cstat-no" title="statement not covered" >await getCard(deckIdUrl);</span>
+        try {
+            const cardValue = await getCard(deckIdUrl);
 <span class="cstat-no" title="statement not covered" >            console.log("CARD VALUE TO CHECK " + cardValue);</span>
     
 <span class="cstat-no" title="statement not covered" >            if (cardValue &gt;= skillDiff){</span>
@@ -171,7 +171,7 @@ async function <span class="fstat-no" title="function not covered" >CardPlay(</s
                 
             }
         } catch (error) {
-<span class="cstat-no" title="statement not covered" >            console.error("Error fetching card value:", error);</span>
+            console.error("Error fetching card value:", error);
         }
     }
 export{CardPlay}
@@ -184,7 +184,7 @@ export{CardPlay}
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-05T13:25:19.813Z
+                at 2024-01-08T11:18:17.141Z
             </div>
         <script src="prettify.js"></script>
         <script>

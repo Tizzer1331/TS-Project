@@ -3,6 +3,7 @@ import {deckFetch} from './ApiManager.ts'
 
 
 function startUp(setActualDeck){
+  console.log("RUN ONCE")
  deckFetch(setActualDeck)
 
   // writeSaveGame(gameSave1)

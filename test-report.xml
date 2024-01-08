@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="78"/>
-    <testCase name="Checking card logic" duration="5"/>
-    <testCase name="Checking card logic" duration="3"/>
-    <testCase name="Checking card logic" duration="4"/>
-    <testCase name="Checking card logic" duration="5"/>
+    <testCase name="Checking card logic" duration="83"/>
+    <testCase name="Checking card logic" duration="8"/>
+    <testCase name="Checking card logic" duration="7"/>
+    <testCase name="Checking card logic" duration="16"/>
+    <testCase name="Checking card logic" duration="10"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/UiRender.test.js">
-    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="51"/>
-    <testCase name="loads items test text is rendered correctly 2AFail" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="58"/>
+    <testCase name="loads items test text is rendered correctly 2AFail" duration="7"/>
     <testCase name="loads items test text is rendered correctly 2BSuccess" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2BFail" duration="3"/>
-    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="16"/>
-    <testCase name="loads items test text is rendered correctly 2CFail" duration="4"/>
-    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="4"/>
+    <testCase name="loads items test text is rendered correctly 2BFail" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="6"/>
+    <testCase name="loads items test text is rendered correctly 2CFail" duration="5"/>
+    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="5"/>
     <testCase name="loads items test text is rendered correctly 2DFail" duration="3"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/DecisionRender.test.js">
+    <testCase name="Playthrough test should show first A button" duration="291"/>
+    <testCase name="Playthrough test should show first B button" duration="40"/>
+    <testCase name="Playthrough test Check Name logic" duration="194"/>
+    <testCase name="Playthrough test Check Profession logic" duration="99"/>
+    <testCase name="Playthrough test Abandon Cart Test" duration="159">
+      <failure message="ReferenceError: cardValue is not defined"><![CDATA[ReferenceError: cardValue is not defined
+    at Object.<anonymous> (/home/jon.tyrrell/vite-project/test/DecisionRender.test.js:106:2)
+    at Promise.then.completed (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:121:9)
+    at run (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/home/jon.tyrrell/vite-project/node_modules/jest-runner/build/testWorker.js:106:12)]]></failure>
+    </testCase>
   </file>
 </testExecutions>

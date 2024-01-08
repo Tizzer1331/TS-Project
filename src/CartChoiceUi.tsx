@@ -1,7 +1,7 @@
 function CartChoice1SuccessUi(){
 
     return(
-<p>
+<p data-testid="UiTestCartA">
     You head into the forest, pushing through the branches following the cries of distress, as you breach into a clearing you see owner of the cart lying against a tree stump
     trying to fend off a couple of Forest Goblins. You handily dispatch them and as you give a hand to the cart owner he speaks "Thank you friend, I was doomed there" he winces slighty
     as he stands a sword wound in his side, "Oh this? I'll live now, I've got some supplies on the cart". As you wander back he hands you some food after bandaging himself.
@@ -13,7 +13,7 @@ function CartChoice1SuccessUi(){
 function CartChoice1FailUi(){
 
     return(
-<p>
+<p data-testid="UiTestCartB">
     You rush through the forest, cutting yourself on brambles and branches rushing to the sound of voices and screaming as fast as you can. You finally breach into a clearing 
     out of breath, just as a group of Forest Goblins finish killing who you can only presume is the cart owner. They turn to you , sneers of malicious glee playing across their
     faces. You turn to run, but they fall upon you so you turn to fight. It's a hard fight but you dispatch them, you head back to the cart tired and worn and see what you can use

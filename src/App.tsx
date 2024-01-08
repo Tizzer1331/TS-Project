@@ -20,7 +20,7 @@ const [name, setName]= useState("");
 const [profession, setProfession]= useState("Warrior");
 const [actualDeckUrl,setActualDeckUrl]=useState("");
 const [deckDecisions,setDeckDecisons] =useState([]);
-useEffect(()=> startUp(setActualDeckUrl),[])
+useEffect(()=> {startUp(setActualDeckUrl)},[])
 
   return (
     <>
