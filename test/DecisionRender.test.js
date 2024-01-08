@@ -54,22 +54,13 @@ render(<App/>)
 
 const fetchMock=jest
 .spyOn(global, 'fetch')
-// .mockImplementation(()=>{
-//     mockImplementation(() => 
-//    Promise.resolve({ 
-//       json: () => Promise.resolve(/*json goes here*/),
-//    })
-// )
 .mockImplementation(()=>Promise.resolve({ json:()=>Promise.resolve(
-`
-    "success": true,
+`   "success": true,
     "deck_id": "3p40paa87x90",
     "shuffled": true,
     "remaining": 52
     `)}
 ))
-    
-// ])}))
 describe("Playthrough test", function () {
     
 it('should show first A button', ()=>{
@@ -97,7 +88,7 @@ it("Check Profession logic", ()=>{
     act(()=>{
     fireEvent.change(screen.getByLabelText('Profession'),{target:{value:"Rogue"}})
     fireEvent.click(screen.getByText("Confirm Profession"),)
-
+   
 })
     const successUiElement=screen.getByText("Rogue");
     

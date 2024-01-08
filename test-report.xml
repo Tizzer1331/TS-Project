@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/jon.tyrrell/vite-project/test/CardLogic.test.js">
-    <testCase name="Checking card logic" duration="74"/>
-    <testCase name="Checking card logic" duration="21"/>
+    <testCase name="Checking card logic" duration="77"/>
+    <testCase name="Checking card logic" duration="7"/>
     <testCase name="Checking card logic" duration="4"/>
-    <testCase name="Checking card logic" duration="14"/>
     <testCase name="Checking card logic" duration="4"/>
+    <testCase name="Checking card logic" duration="5"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/UiRender.test.js">
-    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="58"/>
-    <testCase name="loads items test text is rendered correctly 2AFail" duration="7"/>
-    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="6"/>
-    <testCase name="loads items test text is rendered correctly 2BFail" duration="4"/>
-    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="5"/>
-    <testCase name="loads items test text is rendered correctly 2CFail" duration="19"/>
-    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="11"/>
+    <testCase name="loads items test text is rendered correctly 2ASuccess" duration="61"/>
+    <testCase name="loads items test text is rendered correctly 2AFail" duration="8"/>
+    <testCase name="loads items test text is rendered correctly 2BSuccess" duration="8"/>
+    <testCase name="loads items test text is rendered correctly 2BFail" duration="6"/>
+    <testCase name="loads items test text is rendered correctly 2CSuccess" duration="7"/>
+    <testCase name="loads items test text is rendered correctly 2CFail" duration="6"/>
+    <testCase name="loads items test text is rendered correctly 2DSuccess" duration="6"/>
     <testCase name="loads items test text is rendered correctly 2DFail" duration="5"/>
   </file>
   <file path="/home/jon.tyrrell/vite-project/test/DecisionRender.test.js">
-    <testCase name="Playthrough test should show first A button" duration="195"/>
-    <testCase name="Playthrough test should show first B button" duration="74"/>
-    <testCase name="Playthrough test Check Name logic" duration="200"/>
-    <testCase name="Playthrough test Check Profession logic" duration="134"/>
-    <testCase name="Playthrough test Abandon Cart Test" duration="122">
+    <testCase name="Playthrough test should show first A button" duration="226"/>
+    <testCase name="Playthrough test should show first B button" duration="50"/>
+    <testCase name="Playthrough test Check Name logic" duration="180"/>
+    <testCase name="Playthrough test Check Profession logic" duration="116"/>
+    <testCase name="Playthrough test Abandon Cart Test" duration="131">
       <failure message="ReferenceError: cardValue is not defined"><![CDATA[ReferenceError: cardValue is not defined
-    at Object.<anonymous> (/home/jon.tyrrell/vite-project/test/DecisionRender.test.js:111:2)
+    at Object.<anonymous> (/home/jon.tyrrell/vite-project/test/DecisionRender.test.js:102:2)
     at Promise.then.completed (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:298:28)
     at new Promise (<anonymous>)
     at callAsyncCircusFn (/home/jon.tyrrell/vite-project/node_modules/jest-circus/build/utils.js:231:10)
